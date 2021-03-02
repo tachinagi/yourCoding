@@ -451,18 +451,8 @@ img {
   }
   .content-img {
     margin-bottom: 20px;
+    margin-right: 0;
   }
-  .content-text-wrap {
-    text-align: center;
-  }
-  .content-wrap:nth-of-type(3) h5 {
-    width: 320px;
-    margin: 0 0 40 0px;
-  }
-  .content-wrap:nth-of-type(3) p {
-    margin: 0 0 40px 0;
-  }
-
   /* 価格 */
   .price-table tr {
     width: 100%;
