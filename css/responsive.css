@@ -1,0 +1,412 @@
+@charcet “UTF-8”;
+
+html {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/*---------------------------------------------------------*/
+/*1920px*/
+/*---------------------------------------------------------*/
+@media (width:1920px) {
+/*  ファーストビュー*/
+  .fv {
+    width: 100%;
+    height: 768px;
+    background-image: url(/img/%E6%A5%95%E5%86%86%E5%BD%A2%201.svg);
+    background-repeat: no-repeat;
+    background-position: top -200px right -100px;
+    background-size: 50%;
+  }
+/*  制作実績*/
+  .slide-item {
+    max-width: 422px;
+    height: 507px;
+  }
+}
+/*---------------------------------------------------------*/
+/*768px*/
+/*---------------------------------------------------------*/
+@media (max-width:768px) {
+
+  /*  ヘッダー*/
+  .header .sec-in {
+    width: 90%;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  /*  メニュー*/
+  .top-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4169e1;
+  }
+
+  .top-menu li {
+    width: 100%;
+    height: auto;
+    font-size: 3rem;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 50px;
+    line-height: 4;
+  }
+
+  .top-menu li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .top-menu li a {
+    color: #fff;
+  }
+
+  /*  以下ハンバーガーメニュー/ボタン*/
+  .nav-btn {
+    position: relative;
+    width: 50px;
+    height: 44px;
+    cursor: pointer;
+    z-index: 3;
+    margin-left: auto;
+  }
+
+  .nav-btn span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 4px;
+  }
+
+  .nav-btn,
+  .nav-btn span {
+    display: inline-block;
+    transition: all .5s;
+    box-sizing: border-box;
+  }
+
+  .nav-btn span:nth-of-type(1) {
+    top: 0;
+  }
+
+  .nav-btn span:nth-of-type(2) {
+    top: 20px;
+  }
+
+  .nav-btn span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  /*  以下ハンバーガーメニュー/アニメーション*/
+  .nav-btn.active span:nth-of-type(1) {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(20px) rotate(-45deg);
+    background-color: #fff;
+  }
+
+  .nav-btn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .nav-btn.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-20px) rotate(45deg);
+    background-color: #fff;
+  }
+
+  /* アニメーション前のメニューの状態 */
+  .top-menu {
+    transform: translateX(100vw);
+    transition: all .3s linear;
+  }
+
+  /* アニメーション後のメニューの状態 */
+  .top-menu.active {
+    transform: translateX(0);
+  }
+
+  /*  ファーストビュー*/
+  .fv {
+    background-size: auto;
+  }
+
+  .fv .sec-in {
+    width: 90%;
+  }
+
+  .fv-text-wrap h2 {
+    word-break: keep-all;
+  }
+
+  /*  アバウト*/
+  .about {
+    height: auto;
+  }
+
+  .about .sec-in {
+    width: 90%;
+  }
+
+  .content-text-wrap h5 {
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  .content-wrap:nth-of-type(2) h5 {
+    width: 370px;
+  }
+
+  .content-wrap:nth-of-type(3) h5 {
+    width: 300px;
+  }
+
+  .content-wrap:nth-of-type(2) p {
+    width: 370px;
+    word-break: break-all;
+  }
+
+  .content-wrap:nth-of-type(3) p {
+    width: 300px;
+  }
+
+  .content-img {
+    margin-right: 20px;
+  }
+
+  .content-wrap:nth-of-type(3) .content-img {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
+  /*  価格*/
+  .price .sec-in {
+    width: 90%;
+  }
+
+  .price-wrap {
+    width: 100%;
+  }
+
+  .price-table th {
+    width: 45%;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .price-table td {
+    width: 55%;
+  }
+
+  /*  よくある質問*/
+  .faq .sec-in {
+    width: 90%;
+  }
+
+  .faq-wrap {
+    width: 100%;
+  }
+
+  /*  ブログ*/
+
+  .blog-wrap {
+    padding: 0 30px;
+    justify-content: space-between;
+  }
+
+  .blog-set {
+    width: 47%;
+    height: auto;
+    margin-right: 0;
+  }
+
+  .blog-set:last-of-type {
+    margin-right: auto;
+  }
+
+  /*  お問い合わせ*/
+  .contact .sec-in {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .contact-wrap {
+    width: 100%;
+    padding: 30px;
+  }
+  
+  .contact-box label {
+    margin-left: 0;
+  }
+  
+  input[type="text"],
+  input[type="mail"],
+  textarea {
+    margin-left: 0;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+
+  .contact-box label {
+    font-size: 2rem;
+  }
+
+}
+
+/*---------------------------------------------------------*/
+/*375px*/
+/*---------------------------------------------------------*/
+@media (max-width: 375px) {
+
+  /*  ファーストビュー*/
+  .fv .sec-in {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px 0 113px;
+  }
+
+  /*  アバウト*/
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about .sec-ttl h3 {
+    line-height: 1.4;
+  }
+
+  .content-wrap h5 {
+    margin: 20px 0;
+  }
+
+  .content-wrap:nth-of-type(2) h5 {
+    width: 310px;
+  }
+
+  .content-wrap:nth-of-type(3) h5 {
+    width: 320px;
+  }
+
+  .content-wrap:nth-of-type(4) h5 {
+    width: 320px;
+  }
+
+  .content-wrap p {
+    font-size: 1.8rem;
+  }
+
+  .content-wrap:nth-of-type(2) p {
+    width: 310px;
+    word-break: break-all;
+  }
+
+  .content-wrap:nth-of-type(3) p {
+    width: 320px;
+  }
+
+  .content-img {
+    margin-right: 0;
+  }
+
+  .content-wrap:nth-of-type(3) .content-img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /*  価格*/
+  .price-wrap {
+    text-align: center;
+  }
+
+  .price-table tr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price-table th {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .price-table td {
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  .price-text {
+    line-height: 2;
+  }
+
+  /*  ブログ*/
+  .blog-set {
+    width: 100%;
+  }
+
+  /*  お問い合わせ*/
+  .contact .sec-in {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contact-wrap {
+    width: 90%;
+    padding: 20px 10px;
+  }
+
+  input[type="text"],
+  input[type="mail"] {
+    width: 100%;
+  }
+  
+/*  フッター*/
+  .footer-text span {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 15px 0;
+  }
+  
+  .footer-in p {
+    margin-top: 30px;
+  }
+
+}
