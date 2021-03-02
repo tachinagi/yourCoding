@@ -426,7 +426,17 @@ img {
   .fv .sec-in {
     padding: 30px 0 30px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    text-align: center;
+  }
+  .fv-img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .fv-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
   }
   /* アバウト */
   .about {
@@ -442,6 +452,17 @@ img {
   .content-img {
     margin-bottom: 20px;
   }
+  .content-text-wrap {
+    text-align: center;
+  }
+  .content-wrap:nth-of-type(3) h5 {
+    width: 320px;
+    margin: 0 0 40 0px;
+  }
+  .content-wrap:nth-of-type(3) p {
+    margin: 0 0 40px 0;
+  }
+
   /* 価格 */
   .price-table tr {
     width: 100%;
