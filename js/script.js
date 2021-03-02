@@ -4,18 +4,18 @@ $(function(){
     $(this).toggleClass('active');
     $('.top-menu').toggleClass('active');
   });
-  
+
   $('a[href^="#"]').click(function(){
     $('.top-menu').toggleClass('active');
     $('.nav-btn').toggleClass('active');
   });
-  
+
 //  アコーデオン
   $('.faq-q').click(function(){
     $(this).next('.faq-a').slideToggle();
     $(this).toggleClass("open");
   });
-  
+
 });
 
 //スワイパー
@@ -39,7 +39,7 @@ $(function(){
         },
         375: {
           slidesPerView: 1.9,
-          spaceBetween: 56,
+          spaceBetween: 20,
         }
       }
     });
@@ -47,7 +47,7 @@ $(function(){
 //スムーススクロール
 var scroll = new SmoothScroll('a[href*="#"]', {
   header: '#header',
-  speed: 600
+  speed: 700
 });
 
 //バリデーションチェック
@@ -58,21 +58,21 @@ $(function(){
 //テキストの入力チェック
 $('.required').on('blur', function(){
   var error;
-  
+
   if($(this).val() === '') {
     error = true;
   }
-  
+
   if(error) {
     $(this).prev('.alert').show();
   }else{
     $(this).prev('.alert').hide();
   }
-  
-  
+
+
 //  全て入力されてないと送信できない
   var $submitBtn = $('#contact-btn')
-  
+
   $('#form input,#form textarea').on('change', function () {
     if(
       $('#form input[type="text"]').val() !== "" &&
@@ -90,9 +90,9 @@ $(function(){
   //  送信が完了したら送信ボタンを消しメッセージを出す
   $('#form').submit(function(event){
     var formData = $('#form').serialize();
-    
+
     $("#checkboxSection .alert").hide();
-    
+
     $.ajax({
       url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdA0tC02GIzqwS3pN2IkGt-B4mKLsbvKNnDMm5JC4EDolntUQ/formResponse",
       data: formData,
